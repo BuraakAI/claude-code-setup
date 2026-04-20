@@ -3,6 +3,8 @@
 Flutter + Supabase geliştirme için hazır Claude Code global konfigürasyonu.  
 Skills, MCP sunucuları ve oturum hook'larını içerir.
 
+> Tam kullanım kılavuzu: [KULLANIM.md](KULLANIM.md)
+
 ## İçerik
 
 | Dosya/Klasör | Açıklama |
@@ -12,6 +14,7 @@ Skills, MCP sunucuları ve oturum hook'larını içerir.
 | `scripts/log-session.ps1` | Oturum kapandığında `PROGRESS.md`'e zaman damgası yazar |
 | `skills/` | Özel skill'ler (bug-hunter, build-feature, supabase-expert vb.) |
 | `mcp.example.json` | MCP sunucu şablonu |
+| `KULLANIM.md` | Detaylı Türkçe kullanım rehberi |
 
 ## Kurulum
 
