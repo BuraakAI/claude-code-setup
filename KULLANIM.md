@@ -91,11 +91,11 @@ Adım 3 — Claude'a söyle:
 
 ### 2. Supabase MCP (ai_headshot_app — proje bazlı)
 
-- **Kapsam:** Sadece `ai_headshot_app` klasörü
-- **Dosya:** `ai_headshot_app/.mcp.json` ← `.gitignore`'da, commit edilmez
-- **Proje:** `iyixiqphiczsciscwejw`
+- **Kapsam:** Proje klasörü bazlı
+- **Dosya:** `<proje>/.mcp.json` ← `.gitignore`'da, commit edilmez
+- **Proje:** Supabase dashboard'dan aldığın project ref
 
-Aktivasyon: `ai_headshot_app` klasöründe `claude` açılınca otomatik.
+Aktivasyon: proje klasöründe `claude` açılınca otomatik.
 
 **Ne yapabilirsin:**
 - Tabloları sorgula / yaz / sil
@@ -126,40 +126,7 @@ Aktivasyon: `ai_headshot_app` klasöründe `claude` açılınca otomatik.
 
 ---
 
-## E) Aktif Projeler
-
-### AI Headshot App
-
-| | |
-|---|---|
-| Konum | `C:\Users\burak\OneDrive\Desktop\ai_headshot_app\` |
-| Durum | Yayına hazırlanma aşaması |
-| Stack | Flutter + Supabase + fal.ai + RevenueCat |
-| MCP | Supabase bağlı (otomatik aktif) |
-
-**Yayın için kalan:**
-- [ ] RevenueCat (atelier_pro_monthly/annual)
-- [ ] Google Sign-In (Firebase Console)
-- [ ] Apple Sign-In (Apple Developer)
-- [ ] App Store Connect + Google Play internal test
-- [ ] TestFlight build
-
-### Blokku Block Puzzle
-
-| | |
-|---|---|
-| Konum | `C:\Users\burak\.gemini\antigravity\scratch\woodblock\` |
-| Durum | Yayına hazır — sadece IAP ürünleri bekleniyor |
-| Stack | Flutter + Firebase + google_mobile_ads |
-| Versiyon | 1.3.0+25 |
-
-**Kalan:**
-- [ ] Play Store + App Store: 3 IAP ürün (candy/tropical/lavender)
-- [ ] Sandbox IAP testi → build → gönderim
-
----
-
-## F) Yeni Proje Başlatma Akışı
+## E) Yeni Proje Başlatma Akışı
 
 **1. Roadmap** (koddan ÖNCE)
 ```bash
@@ -193,19 +160,19 @@ Token : https://supabase.com/dashboard/account/tokens
 
 ---
 
-## G) Günlük Geliştirme Akışı
+## F) Günlük Geliştirme Akışı
 
 | Görev | Komut |
 |---|---|
 | Yeni özellik | `@build-feature <özellik> "<açıklama>"` |
 | Hata | `@bug-hunter` → stack trace yapıştır |
-| Supabase | `ai_headshot_app`'te direkt yaz, MCP halleder |
+| Supabase | Proje klasöründe direkt yaz, MCP halleder |
 | Kod inceleme | `git diff origin/main...HEAD \| claude -p "Sorun var mı?"` |
 | Token tasarrufu | `@token-saver` |
 
 ---
 
-## H) Supabase CLI (Hızlı Referans)
+## G) Supabase CLI (Hızlı Referans)
 
 ```bash
 supabase login
@@ -220,7 +187,7 @@ supabase secrets set KEY=value
 
 ---
 
-## I) Dosya Haritası
+## H) Dosya Haritası
 
 ```
 ~/.claude/
@@ -242,19 +209,17 @@ supabase secrets set KEY=value
 ~/.claude.json             → Excalidraw MCP kaydı (global)
 
 Projeler:
-  ai_headshot_app/
+  <proje-klasörü>/
     .mcp.json              → Supabase MCP (.gitignore'da)
-    CLAUDE.md / PROGRESS.md
-  woodblock/ (Blokku)
     CLAUDE.md / PROGRESS.md
 
 Tools:
-  C:\Users\burak\tools\mcp_excalidraw\  → Excalidraw MCP
+  <mcp_excalidraw-klasörü>/  → Excalidraw MCP
 ```
 
 ---
 
-## J) GitHub Backup & Ekip Kurulumu
+## I) GitHub Backup & Ekip Kurulumu
 
 - **Repo:** [github.com/BuraakAI/claude-code-setup](https://github.com/BuraakAI/claude-code-setup)
 - **Güncelle:** `claude-code-setup` klasöründe değişiklik yap → commit → push
@@ -272,7 +237,7 @@ Sistem güncellemesi geldiğinde aynı komutu tekrar çalıştır — mevcut aya
 
 ---
 
-## K) Hatırlatıcılar
+## J) Hatırlatıcılar
 
 - `~/.claude/CLAUDE.md` her oturumda otomatik — skills değil
 - Skills `@` ile **elle** çağrılır
